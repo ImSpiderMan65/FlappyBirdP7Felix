@@ -5,10 +5,14 @@ using UnityEngine;
 public class SpiderHero : MonoBehaviour
 {
     private bool isDead = false;
+    private Rigidbody2D rb2d;
+    public float upForce = 200f;
+    PolygonCollider2D poly2d;
     // Start is called before the first frame update
     void Start()
     {
-        
+        rb2d = GetComponent<Rigidbody2D>();
+        poly2d = GetComponent<PolygonCollider2D>();
     }
 
     // Update is called once per frame
@@ -16,7 +20,17 @@ public class SpiderHero : MonoBehaviour
     {
         if (isDead == false)
         {
-
+            if (Input.GetMouseButtonUp(0))
+            {
+                 rb2d.velocity = Vector3.zero;
+                rb2d.AddForce(new Vector2(0, upForce));
+            }
+            
         }
+    }
+    void OnCollisionEnter2D (Collision2D collision)
+    {
+        isDead = true;
+        poly2d.offset = new Vector2(0, -0.1f);
     }
 }

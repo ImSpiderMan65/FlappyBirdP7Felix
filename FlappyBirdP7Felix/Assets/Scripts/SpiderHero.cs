@@ -8,11 +8,13 @@ public class SpiderHero : MonoBehaviour
     private Rigidbody2D rb2d;
     public float upForce = 200f;
     PolygonCollider2D poly2d;
+    private Animator anim;
     // Start is called before the first frame update
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
         poly2d = GetComponent<PolygonCollider2D>();
+        anim = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -24,6 +26,7 @@ public class SpiderHero : MonoBehaviour
             {
                  rb2d.velocity = Vector3.zero;
                 rb2d.AddForce(new Vector2(0, upForce));
+                anim.SetTrigger("Jump");
             }
             
         }
@@ -31,6 +34,7 @@ public class SpiderHero : MonoBehaviour
     void OnCollisionEnter2D (Collision2D collision)
     {
         isDead = true;
-        poly2d.offset = new Vector2(0, -0.1f);
+        poly2d.offset = new Vector2(0, 1.50f);
+        anim.SetTrigger("Die");
     }
 }

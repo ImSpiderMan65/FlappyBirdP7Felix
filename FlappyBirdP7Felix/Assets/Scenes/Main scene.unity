@@ -316,7 +316,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &503028952
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -469,7 +469,7 @@ Transform:
   m_GameObject: {fileID: 577698464}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.0014411764, y: 0.9146279, z: 0}
+  m_LocalPosition: {x: -0.019, y: 4.986, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -516,7 +516,7 @@ SpriteRenderer:
   m_SortingLayerID: 325428309
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: -566283319, guid: 4b32f0aa3fb57e046bf4910443a8d907, type: 3}
+  m_Sprite: {fileID: 1835137621, guid: 13898ed82d50213449adeacdddb65a55, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -586,7 +586,7 @@ SpriteRenderer:
   m_SortingLayerID: 1985269103
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 1196734160, guid: 4b32f0aa3fb57e046bf4910443a8d907, type: 3}
+  m_Sprite: {fileID: 474678910, guid: 13898ed82d50213449adeacdddb65a55, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -607,7 +607,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.0049, y: -4.122, z: 0}
-  m_LocalScale: {x: 3.4, y: 4.506751, z: 0.99819505}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 577698465}
@@ -645,18 +645,18 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: -0.5393522}
+  m_Offset: {x: -0.053655624, y: -0.19161463}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 6.39, y: 0.39}
+    oldSize: {x: 32.041584, y: 1.85}
     newSize: {x: 6.39, y: 0.39}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 6.39, y: 1.4212956}
+  m_Size: {x: 32.213566, y: 2.1167707}
   m_EdgeRadius: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

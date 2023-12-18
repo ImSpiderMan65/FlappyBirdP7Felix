@@ -9,6 +9,9 @@ public class SpiderHero : MonoBehaviour
     public float upForce = 200f;
     PolygonCollider2D poly2d;
     private Animator anim;
+    AudioSource sounds;
+    public AudioClip Jump;
+    public AudioClip Die;
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +30,8 @@ public class SpiderHero : MonoBehaviour
                  rb2d.velocity = Vector3.zero;
                 rb2d.AddForce(new Vector2(0, upForce));
                 anim.SetTrigger("Jump");
+                playSound(Jump);
+                
             }
             
         }
@@ -36,5 +41,13 @@ public class SpiderHero : MonoBehaviour
         isDead = true;
         poly2d.offset = new Vector2(0, 1.50f);
         anim.SetTrigger("Die");
+        gameController.instance.SpiderDied();
+        rb2d.velocity = Vector2.zero;
+        playSound(Die);
+    }
+
+    public void playSound(AudioClip clip)
+    {
+        sounds.PlayOneShot(clip);
     }
 }

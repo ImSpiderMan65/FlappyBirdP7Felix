@@ -27,7 +27,7 @@ public class SpiderHero : MonoBehaviour
         {
             if (Input.GetMouseButtonUp(0))
             {
-                 rb2d.velocity = Vector3.zero;
+                rb2d.velocity = Vector3.zero;
                 rb2d.AddForce(new Vector2(0, upForce));
                 anim.SetTrigger("Jump");
                 playSound(Jump);

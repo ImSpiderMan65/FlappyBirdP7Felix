@@ -12,12 +12,14 @@ public class SpiderHero : MonoBehaviour
     AudioSource sounds;
     public AudioClip Jump;
     public AudioClip Die;
+    public AudioClip score;
     // Start is called before the first frame update
     void Start()
     {
         rb2d = GetComponent<Rigidbody2D>();
         poly2d = GetComponent<PolygonCollider2D>();
         anim = GetComponent<Animator>();
+        sounds = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -50,4 +52,5 @@ public class SpiderHero : MonoBehaviour
     {
         sounds.PlayOneShot(clip);
     }
+
 }

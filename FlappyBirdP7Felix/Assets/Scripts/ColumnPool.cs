@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class Collum : MonoBehaviour
+public class ColumnPool : MonoBehaviour
 {
 
     public int columnPoolSize = 5;
@@ -15,7 +15,7 @@ public class Collum : MonoBehaviour
     private float timeSinceLastspawn;
     private float spawnXPosition = 10f;
     private Vector2 objectPoolPosition = new Vector2(-15f, -25f);
-    public GameObject Columns;
+    public GameObject[] Columns;
     private int currentColumn;
     // Start is called before the first frame update
     void Start()
@@ -32,7 +32,7 @@ public class Collum : MonoBehaviour
     {
         timeSinceLastspawn = Time.deltaTime;
 
-        if (gameController.gameOver == false && timeSinceLastspawn >= spawnRate)
+        if (gameController.instance.gameOver == false && timeSinceLastspawn >= spawnRate)
         {
             timeSinceLastspawn = 0;
             float SpawnYPosition = Random.Range (columnMin, columnMax);

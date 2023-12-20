@@ -36,6 +36,7 @@ public class gameController : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
 
         }
+        
     }
 
     public void SpiderScored()

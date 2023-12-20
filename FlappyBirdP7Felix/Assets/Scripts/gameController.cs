@@ -12,7 +12,7 @@ public class gameController : MonoBehaviour
     public bool gameOver = false;
     public float scrollSpeed = -1.5f;
 
-    public int score = 0;
+    private int score = 0;
     public TextMeshProUGUI ScoreText;
 
     // Start is called before the first frame update
